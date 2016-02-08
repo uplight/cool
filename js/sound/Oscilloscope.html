@@ -1,0 +1,100 @@
+<div id="upl-oscilloscope" data-buffer="2048">
+        <style type="text/css">
+            #upl-oscilloscope{
+                font-size:12px;
+                width:1070px;
+                padding:1em;
+                font-size: x-small;
+            }
+            #upl-oscilloscope canvas{
+                background-color: #f6f5f5;
+            }
+            #upl-oscilloscope>div{
+                border:1px solid #808080;
+                box-shadow: 5px 5px 5px  #666666;
+                padding:1em;
+            }
+            #upl-oscilloscope .upl-controls select{
+                max-width: 150px;
+            }
+            .upl-controls>div{
+                display:inline-block;
+                border:1px solid #808080;
+                padding:0.2em;
+                border-radius:5px;
+            }
+            #upl-oscilloscope .small_label{
+                width:2em;
+                display:inline-block;
+            }
+
+
+            #upl-oscilloscope  .color-red{
+                background-color:pink;
+            }
+            #upl-dataView{
+                overflow-y: auto;
+                max-height: 600px;
+            }
+            .slider1000{
+                width:995px;
+            }
+            [data-id="volume"]{
+                display: inline !important;
+                width: 80% !important;
+            }
+            [ data-id="an_range"]{
+                display: inline !important;
+                width: 95% !important;
+            }
+        </style>
+        <div class="upl-controls">
+            <div>Input Select:<select data-id="input_select"></select></div>           
+            <div>Screen width: <span id="upl-speed" class="small_label"></span>ms </div>
+            <div>Max val: <span id="upl-maxval" class="small_label"></span>ms </div>
+            <div><b>Record</b> Total screens:
+                <input type="number" step="100" min="100" style="width:4em;" value="100" class="num_records" data-id="length" />
+                Sensitivity:
+                <input type="number" step="5" min="0" style="width:4em;" value="0"  max="120" class="num_records" data-id="sensitivity" />
+                <button data-id="start_stop">Start Recording</button>
+                <button data-id="clear">Clear Records</button>
+                <button data-id="print">Print Recorded</button>
+            </div>
+            <hr/>
+            <canvas id="upl-screen1" width="1024" height="256" data-color="#0000FF"></canvas>
+            <hr/>
+        </div>
+        <br/>
+        <div id="upl-recorder">
+            <div class="rec-controls">
+                <input type="range" step="1" value="0" min="0" max="1000" class="slider1000"  data-id="an_range" /><span data-id="screens" class="small_label">999</span>
+            </div>
+            <br/>
+            <canvas id="upl-screen2" width="1024" height="256"  data-color="#FF00FF"></canvas>
+        </div>
+        <br/>
+        <div id="upl-dataView">
+
+        </div>
+        <br/>
+        <div id="upl-oscillator">
+            <div class="upl-controls">         
+                 
+                <div><input type="checkbox" data-id="onoff" />ON/OFF </div><div><input checked="checked" type="radio" name="wave" data-id="sin" />~~ &nbsp;<input type="radio" name="wave" data-id="triangle" />^^ &nbsp;<input type="radio" name="wave" data-id="square" />_||_ &nbsp;<input type="radio" name="wave" data-id="sawtooth" />/|/| &nbsp;</div>
+                <div><input type="range" step="0.05" value="0.5" min="0" max="1" data-id="volume"><span data-id="volumeind" class="small_label">999</span></div>
+                <br/>
+                <input type="range" step="0.1" value="10" min="2" max="30" data-id="an_range" class="slider1000"><span data-id="frequency" class="small_label">999</span>
+            </div>
+         </div>
+
+    <script>
+        require(['js/sound/UplOscilloscope4','js/sound/UplOscillator'], function() {
+            var oscilloscope = new upl.Oscilloscope('upl');
+            var generator = new upl.Oscillator('upl');
+        });
+
+
+    </script>
+
+</div>
+

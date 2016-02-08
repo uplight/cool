@@ -1,6 +1,6 @@
-/// <reference path="../../Scripts/typings/easeljs/easeljs.d.ts" />
-/// <reference path="../../Scripts/typings/MediaStream.d.ts" />
-/// <reference path="../../Scripts/typings/jquery/jquery.d.ts" />
+/// <reference path="../libs/typings/easeljs.d.ts" />
+/// <reference path="../libs/typings/MediaStream.d.ts" />
+/// <reference path="../libs/typings/jquery.d.ts" />
 /**
  * Created by Vlad  Titov http://uplight.ca  on 7/5/2014.
  */

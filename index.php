@@ -29,7 +29,7 @@
 <nav ng-controller="Navcontroller">
     <a class="btn" class="active" href="#/">Home</a>
     <a class="btn" href="#/Puzzle">Puzzle</a>
-    <a class="btn" href="#/ImageGallery">Image Gallery</a>
+    <a class="btn" href="#/Osciloscope">Sound</a>
 </nav>
 <br/>
 <section id="Content" ng-view>
@@ -42,8 +42,6 @@
 <script src="js/libs/easeljs-0.8.2.min.js"></script>
 <script src="js/libs/tweenjs-0.6.2.min.js"></script>
 <script src="js/libs/webgl-0.8.1.min.js"></script>
-
-
 
 
 <!--<script src="js/RoutingApp.js"></script>

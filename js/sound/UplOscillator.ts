@@ -162,10 +162,8 @@ module upl {
             super();
             this.name = dot.id.toString();
             this.x = dot.x;
-            this.y = dot.y;           
-
+            this.y = dot.y;
             this.model = dot;
-
             var sh: c.Shape = new c.Shape();
            
             sh.graphics.beginFill(this.color);

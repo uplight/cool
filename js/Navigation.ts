@@ -38,8 +38,8 @@ module mainapp {
                 //  controllerAs:'home2',
                 templateUrl:'htms/home.html'
             })
-            .when("/ImageGallery", {
-                templateUrl: "hallmark/ImageGallery4.html"
+            .when("/Osciloscope", {
+                templateUrl: "js/sound/Oscilloscope.html"
             })
             .when('/Puzzle',{
                 //controller:'HomeController',
